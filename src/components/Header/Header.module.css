@@ -1,0 +1,86 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondery-color);
+  width: 100%;
+  padding: 15px 25px;
+  overflow-x: hidden;
+}
+
+.logo {
+  color: var(--secondery-color);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--hover-btn);
+  text-decoration: underline;
+}
+
+.logo img {
+  width: 40px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 430px;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+}
+
+.a {
+  transition: all 0.3s ease;
+}
+
+.a:hover {
+  color: var(--hover-btn);
+  text-decoration: underline;
+}
+
+.contact {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 40px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--text-primary);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+.contact:hover,
+.contact:focus {
+  background: var(--secondary-hover);
+  color: var(--secondary-color, white);
+  border-color: var(--secondary-hover);
+}
+
+@media screen and (max-width: 1240px) {
+  .header {
+    padding: 10px 25px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
