@@ -75,12 +75,21 @@
   border-color: var(--secondary-hover);
 }
 
+.open {
+  display: none;
+}
+
 @media screen and (max-width: 1240px) {
   .header {
     padding: 10px 25px;
   }
-
+  .contact {
+    display: none;
+  }
   .nav {
     display: none;
+  }
+  .open {
+    display: block;
   }
 }

@@ -1,11 +1,14 @@
 import s from "./Header.module.css";
 
+import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
+import Burger from "../Burger/Burger";
 
 const title = "AI Ledger Lab";
 
-const items = [
+export const items = [
   { text: "Home", url: "#home" },
   { text: "Why choose us?", url: "#why-choose" },
   { text: "About us", url: "#about-us" },
@@ -15,6 +18,14 @@ const items = [
 ];
 
 export default function Header() {
+  const [menuToggle, setMenuToggle] = useState(false);
+
+  const handleOpenMenu = () => {
+    setMenuToggle(true);
+  };
+  const handleCloseMenu = () => {
+    setMenuToggle(false);
+  };
   return (
     <header className={s.header}>
       <Link className={s.logo} to="/home">
@@ -38,55 +49,13 @@ export default function Header() {
         Contact
       </a>
 
-      {/* <button class="burger-btn burgerBtn">
-        <svg>
-          <use href="./images/sprite.svg#burger"></use>
-        </svg>
+      <button onClick={handleOpenMenu} className={s.open}>
+        <RxHamburgerMenu size={30} />
       </button>
-      <div class="mobile-menu mobileMenu">
-        <button class="close-btn closeBtn">
-          <svg>
-            <use href="./images/sprite.svg#cross"></use>
-          </svg>
-        </button>
-        <nav class="mobile-nav">
-          <ul class="mobile-nav-list">
-            <li>
-              <a class="mobile-nav-link" href="./index.html">
-                Accueil
-              </a>
-            </li>
-            <li>
-              <a class="mobile-nav-link" href="./index.html#why-choose">
-                Pourquoi nous choisir ?
-              </a>
-            </li>
-            <li>
-              <a class="mobile-nav-link" href="./index.html#about-us">
-                À propos de nous
-              </a>
-            </li>
-            <li>
-              <a class="mobile-nav-link" href="./index.html#reviews">
-                Avis
-              </a>
-            </li>
-            <li>
-              <a class="mobile-nav-link" href="./index.html#our-blog">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a class="mobile-nav-link" href="./index.html#faq">
-                FAQ
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a class="primary-btn mobile-nav-link" href="./index.html#contact">
-          Contact
-        </a>
-      </div> */}
+
+      {menuToggle && (
+        <Burger handleCloseMenu={handleCloseMenu} menuToggle={menuToggle} />
+      )}
     </header>
   );
 }
