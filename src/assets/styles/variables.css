@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #8176af;
+  --secondary-color: rgba(13, 13, 13, 0.32);
+  --primary-hover: #5e4c87;
+  --secondary-hover: linear-gradient(90deg, #65579f 0%, #c0b7e8 100%);
+
+  --text-primary: rgba(255, 255, 255, 0.95);
+  --text-secondary: linear-gradient(227deg, #c0b7e8 0%, #8176af 100%);
+  --text-inverted: #2e2e2e;
+
+  --background-color: #2d323d;
+  --secondary-background: radial-gradient(
+    50% 50% at 50% 50%,
+    #403a5f 0%,
+    #211e2e 100%
+  );
+  --accordion-active: #d8d6f577;
+
+  --linear-gradient: linear-gradient(
+    180deg,
+    rgba(255, 30, 30, 0.8) 0%,
+    #c30eff 100%
+  );
+  --blur: blur(376.5px);
+  --border-radius: 40px;
+}
