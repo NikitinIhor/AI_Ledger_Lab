@@ -6,16 +6,10 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import Burger from "../Burger/Burger";
 
-const title = "AI Ledger Lab";
+import data from "../../../data.json";
 
-export const items = [
-  { text: "Home", url: "#home" },
-  { text: "Why choose us?", url: "#why-choose" },
-  { text: "About us", url: "#about-us" },
-  { text: "Reviews", url: "#reviews" },
-  { text: "Blog", url: "#our-blog" },
-  { text: "FAQ", url: "#faq" },
-];
+export const headerItems = data.header.items;
+const headerTitle = data.header.title;
 
 export default function Header() {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -30,12 +24,12 @@ export default function Header() {
     <header className={s.header}>
       <Link className={s.logo} to="/home">
         <img src={logo} alt="AI Ledger Lab" />
-        {title}
+        {headerTitle}
       </Link>
 
       <nav className={s.nav}>
         <ul className={s.list}>
-          {items.map(({ text, url }) => (
+          {headerItems.map(({ text, url }) => (
             <li key={text} className={s.li}>
               <a href={url} className={s.a}>
                 {text}

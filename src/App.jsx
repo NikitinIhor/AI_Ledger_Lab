@@ -1,4 +1,6 @@
-import { lazy, Suspense } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/Loader/Loader";
 
@@ -12,6 +14,10 @@ const ConditionsPage = lazy(() =>
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export default function App() {
+  useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
+
   return (
     <div className="container">
       <Suspense fallback={<Loader />}>

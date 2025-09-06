@@ -1,10 +1,13 @@
 import Header from "../../components/Header/Header";
-import s from "./HomePage.module.css";
+import Section1 from "../../components/Section1/Section1";
 
 export default function HomePage() {
   return (
-    <div className={s.homePage}>
+    <>
       <Header />
-    </div>
+      <main>
+        <Section1 />
+      </main>
+    </>
   );
 }

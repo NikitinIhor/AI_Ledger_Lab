@@ -1,0 +1,184 @@
+.hero {
+  padding: 140px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.content {
+  max-width: 460px;
+  padding-top: 60px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: #fff;
+  background-clip: text;
+  margin-bottom: 36px;
+}
+
+.title span {
+  font-size: 56px;
+  background: linear-gradient(156deg, #c0b7e8 0%, #8176af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.descr {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 169%;
+  color: var(--text-secondary);
+  margin-bottom: 66px;
+}
+
+.primary-btn {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--text-inverted);
+  padding: 12px 40px;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+}
+
+.primary-btn:hover {
+  background: var(--secondary-hover);
+  color: var(--text-inverted);
+}
+
+.wrapper {
+  width: 450px;
+  height: 426px;
+  background: transparent;
+}
+
+.wrapper img {
+  border-radius: 100px 100px 100px 240px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 700px;
+  z-index: -1;
+}
+
+.wrapper .curve-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 500px;
+  height: 700px;
+  z-index: -1;
+  fill: transparent;
+}
+
+@keyframes drawCurve {
+  0% {
+    stroke-dasharray: 0 1000;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1000 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.wrapper use {
+  stroke-width: 6;
+  fill: none;
+  stroke-dasharray: 0 1000;
+  stroke-dashoffset: 0;
+  animation: drawCurve 2s linear forwards;
+}
+
+.wrapper .curve2-icon {
+  position: absolute;
+  right: 135px;
+  top: 0px;
+  bottom: 0;
+  width: 500px;
+  height: 800px;
+  z-index: -1;
+  fill: transparent;
+}
+
+.wrapper .curve3-icon {
+  position: absolute;
+  right: 0px;
+  top: 300px;
+  width: 700px;
+  height: 450px;
+  z-index: -1;
+  fill: transparent;
+}
+
+@media screen and (max-width: 1240px) {
+  .hero {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .wrapper {
+    max-width: 450px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .wrap {
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .title span {
+    font-size: 36px;
+  }
+
+  .descr {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .primary-btn {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

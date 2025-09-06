@@ -5,9 +5,9 @@
   max-width: 100%;
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1440px) {
   .container {
-    max-width: 1240px;
+    max-width: 1440px;
     padding: 0 85px;
   }
 }

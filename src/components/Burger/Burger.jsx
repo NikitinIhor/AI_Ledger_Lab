@@ -1,5 +1,5 @@
 import { RiCloseLargeFill } from "react-icons/ri";
-import { items } from "../Header/Header";
+import { headerItems } from "../Header/Header";
 import s from "./Burger.module.css";
 
 export default function Burger({ handleCloseMenu, menuToggle }) {
@@ -17,7 +17,7 @@ export default function Burger({ handleCloseMenu, menuToggle }) {
 
         <nav className={s.nav}>
           <ul className={s.list}>
-            {items.map(({ text, url }) => (
+            {headerItems.map(({ text, url }) => (
               <li key={text} className={s.li}>
                 <a href={url} className={s.a}>
                   {text}
