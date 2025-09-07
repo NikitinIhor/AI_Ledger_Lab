@@ -1,10 +1,9 @@
 import sprite from "../../assets/icons/sprite.svg";
 import image from "../../assets/images/hero-blockchain.jpg";
-import s from "./Section1.module.css";
 
-const descr = `Discover how artificial intelligence can transform
-the analysis and management of blockchain data. Simplify complex
-processes and gain valuable insights for your projects.`;
+import { section1 } from "../../../data.js";
+
+import s from "./Section1.module.css";
 
 export default function Section1() {
   return (
@@ -13,15 +12,15 @@ export default function Section1() {
         <div className={s["hero-container"]}>
           <div className={s.content} data-aos="fade-right">
             <h1 className={s.title}>
-              <span>Explore</span> The Possibilities Of
-              <span>AI and Blockchain</span>
+              <span>{section1.titleSpan1}</span> {section1.title}
+              <span>{section1.titleSpan2}</span>
             </h1>
-            <p className={s.descr}>{descr}</p>
+            <p className={s.descr}>{section1.descr}</p>
             <button
               className={s["primary-btn"]}
               onClick={() => (window.location.href = "#contact")}
             >
-              GET STARTED NOW
+              {section1.btn}
             </button>
           </div>
           <div className={s.wrapper}>

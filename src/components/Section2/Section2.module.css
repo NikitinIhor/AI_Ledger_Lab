@@ -1,0 +1,171 @@
+.about {
+  padding: 100px 0;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+}
+
+.title2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+}
+
+.line::before {
+  content: "";
+  background-color: #c0b7e8;
+  width: 0%;
+  height: 2.3px;
+  margin-right: -5px;
+  transition: all 2s linear;
+}
+
+.line::before {
+  width: 100%;
+}
+
+.line svg {
+  width: 42px;
+  height: 33px;
+}
+
+.descr {
+  max-width: 550px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 169%;
+  color: var(--text-secondary);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.img {
+  border-radius: 100px 240px;
+  width: 100%;
+  max-width: 524px;
+  height: 557px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+.text {
+  padding-top: 50px;
+  max-width: 630px;
+}
+
+.title3 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.descr2 {
+  margin-bottom: 28px;
+}
+
+@keyframes drawCurveAbout {
+  0% {
+    stroke-dasharray: 0 1500;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1500 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.curve4,
+.curve5 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  fill: none;
+  z-index: -1;
+}
+
+.curve5 {
+  bottom: 50px;
+}
+
+.curve4 {
+  top: 150px;
+}
+
+.about:has(.aos-animate) .curve4,
+.about:has(.aos-animate) .curve5 {
+  stroke-dasharray: 0 1500;
+  stroke-dashoffset: 0;
+  animation: drawCurveAbout 2s linear forwards;
+}
+
+@media screen and (max-width: 1240px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 56px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .title2 {
+    align-items: center;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  .img {
+    height: 360px;
+    border-radius: 60px 140px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .title3 {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .text .primary-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
