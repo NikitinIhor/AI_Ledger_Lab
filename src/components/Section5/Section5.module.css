@@ -1,0 +1,63 @@
+.services {
+  padding: 100px 0;
+  position: relative;
+}
+
+.curve {
+  position: absolute;
+  top: 320px;
+  left: 0;
+  right: 0;
+  height: 160px;
+  width: 100%;
+  z-index: -1;
+  fill: transparent;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.title {
+  display: flex;
+}
+.descr {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 169%;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+@keyframes drawCurveServices {
+  0% {
+    stroke-dasharray: 0 1700;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1700 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+.services:has(.aos-animate) .curve {
+  stroke-dasharray: 0 1700;
+  stroke-dashoffset: 0;
+  animation: drawCurveServices 2s linear forwards;
+}
+
+@media screen and (max-width: 1240px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .curve {
+    display: none;
+  }
+
+  .descr {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,136 @@
+.services {
+  padding: 100px 0;
+  position: relative;
+}
+
+.mySwiper {
+  width: 100%;
+}
+
+.our-services-list-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.32);
+  margin: 0 auto 25px;
+  position: relative;
+}
+
+.our-services-list-wrap::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(251deg, #c0b7e8 0%, #8176af 100%);
+  border-radius: inherit;
+}
+
+.our-services-list-wrap p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 64px;
+  color: #343045;
+  position: relative;
+}
+
+.subttile {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 150%;
+  font-family: var(--second-family);
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.descr {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 169%;
+  color: var(--text-secondary);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #343045;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: linear-gradient(251deg, #c0b7e8 0%, #8176af 100%);
+  z-index: -1;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.1);
+  color: #fff;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .our-services-list-wrap {
+    width: 150px;
+    height: 150px;
+  }
+
+  .our-services-list-wrap p {
+    font-size: 48px;
+  }
+
+  .descr {
+    font-size: 14px;
+    max-width: 250px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+}

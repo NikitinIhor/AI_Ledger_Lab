@@ -40,8 +40,13 @@ export const section3 = {
 export const section4 = {
   title: "TECHNOLOGIES & OUTILS",
   titleSpan: "AI LEDGER LAB?",
+};
+
+export const section5 = {
+  title: "HOW WE",
+  titleSpan: "WORK WITH AI",
   descr:
-    "We combine artificial intelligence and blockchain to provide unique solutions. Discover how our tools can transform the way you work with decentralized data.",
+    "At AI Ledger Lab, we use artificial intelligence to simplify blockchain data analysis. Our tools transform complex data sets into actionable insights while ensuring an intuitive and accessible approach for users.",
 };
 
 export const Slideritems = [
@@ -70,5 +75,36 @@ export const Slideritems = [
     alt: "Visualization",
     title: "VISUALIZATION",
     descr: "Turn complex data into clear and actionable visualizations.",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    number: "01",
+    title: "Data Extraction",
+    descr:
+      "Use our tools to extract relevant blockchain data and organize it in a structured way.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Automated Analysis",
+    descr:
+      "AI analyzes data in real-time to identify trends and patterns useful for your projects.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Intuitive Visualization",
+    descr:
+      "Transform complex data into interactive charts and tables for better understanding.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Process Optimization",
+    descr:
+      "Automate repetitive tasks to save time and improve the efficiency of your analyses.",
   },
 ];
