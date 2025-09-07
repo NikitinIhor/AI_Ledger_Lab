@@ -35,6 +35,11 @@ export const section2 = {
 export const section3 = {
   title: "WHY CHOOSE",
   titleSpan: "AI LEDGER LAB?",
+};
+
+export const section4 = {
+  title: "TECHNOLOGIES & OUTILS",
+  titleSpan: "AI LEDGER LAB?",
   descr:
     "We combine artificial intelligence and blockchain to provide unique solutions. Discover how our tools can transform the way you work with decentralized data.",
 };
