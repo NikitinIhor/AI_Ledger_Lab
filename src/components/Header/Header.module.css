@@ -1,32 +1,29 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
-  color: var(--secondery-color);
-  width: 100%;
-  padding: 15px 25px;
-  overflow-x: hidden;
-}
-
-.logo {
-  color: var(--secondery-color);
-}
-.logo {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  color: #fff;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
-.logo:hover {
-  color: var(--hover-btn);
-  text-decoration: underline;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .logo img {
@@ -36,17 +33,19 @@
 
 .nav {
   display: flex;
-  gap: 430px;
-  align-items: center;
 }
 
 .list {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .a {
-  transition: all 0.3s ease;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .a:hover {
@@ -62,12 +61,13 @@
   letter-spacing: 0.01em;
   display: inline-block;
   background: transparent;
-  color: var(--text-primary);
+  color: #fff;
   padding: 12px 40px;
   border-radius: var(--border-radius);
-  border: 1px solid var(--text-primary);
-  transition: background 0.4s ease, color 0.4s ease;
+  border: 1px solid #fff;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
 .contact:hover,
 .contact:focus {
   background: var(--secondary-hover);
@@ -77,19 +77,28 @@
 
 .open {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.open:hover {
+  color: var(--hover-btn);
 }
 
 @media screen and (max-width: 1240px) {
-  .header {
-    padding: 10px 25px;
-  }
+  .nav,
   .contact {
     display: none;
   }
-  .nav {
-    display: none;
-  }
+
   .open {
     display: block;
+  }
+
+  .header {
+    padding: 10px 25px;
   }
 }

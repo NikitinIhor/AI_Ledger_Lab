@@ -1,0 +1,41 @@
+.why {
+  padding: 100px 0;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.descr {
+  max-width: 650px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 169%;
+  color: var(--text-secondary);
+}
+
+.block {
+  display: flex;
+}
+
+@media screen and (max-width: 1240px) {
+  .why {
+    padding: 60px 0;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 56px;
+  }
+  .descr {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}

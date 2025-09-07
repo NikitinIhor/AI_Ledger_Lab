@@ -31,3 +31,39 @@ export const section2 = {
     "Our mission is to simplify access to blockchain data through AI. We provide powerful tools to analyze, visualize, and understand complex information, enabling informed decision-making and efficient management of blockchain-based projects.",
   btn: "CONTACT US",
 };
+
+export const section3 = {
+  title: "WHY CHOOSE",
+  titleSpan: "AI LEDGER LAB?",
+  descr:
+    "We combine artificial intelligence and blockchain to provide unique solutions. Discover how our tools can transform the way you work with decentralized data.",
+};
+
+export const Slideritems = [
+  {
+    img: "./src/assets/images/data-analysis.jpg",
+    alt: "Data Analysis",
+    title: "DATA ANALYSIS",
+    descr:
+      "Use AI to explore and interpret blockchain data with precision and speed.",
+  },
+  {
+    img: "./src/assets/images/automation.jpg",
+    alt: "Automation",
+    title: "AUTOMATION",
+    descr: "Automate complex processes to save time and improve efficiency.",
+  },
+  {
+    img: "./src/assets/images/security.jpg",
+    alt: "Security",
+    title: "SECURITY",
+    descr:
+      "Ensure the security and confidentiality of data with robust solutions.",
+  },
+  {
+    img: "./src/assets/images/visualization.jpg",
+    alt: "Visualization",
+    title: "VISUALIZATION",
+    descr: "Turn complex data into clear and actionable visualizations.",
+  },
+];

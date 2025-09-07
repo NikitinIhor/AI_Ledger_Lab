@@ -1,33 +1,27 @@
-import s from "./Header.module.css";
-
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { header } from "../../../data.js";
 import logo from "../../assets/images/logo.png";
 import Burger from "../Burger/Burger";
-
-import { header } from "../../../data.js";
+import s from "./Header.module.css";
 
 export default function Header() {
   const [menuToggle, setMenuToggle] = useState(false);
 
-  const handleOpenMenu = () => {
-    setMenuToggle(true);
-  };
-  const handleCloseMenu = () => {
-    setMenuToggle(false);
-  };
+  const handleOpenMenu = () => setMenuToggle(true);
+  const handleCloseMenu = () => setMenuToggle(false);
+
   return (
     <header className={s.header}>
-      <Link className={s.logo} to="/home">
-        <img src={logo} alt="AI Ledger Lab" />
+      <a className={s.logo} href="#">
+        <img src={logo} alt="AI Ledger Lab Logo" />
         {header.title}
-      </Link>
+      </a>
 
       <nav className={s.nav}>
         <ul className={s.list}>
           {header.items.map(({ text, url }) => (
-            <li key={text} className={s.li}>
+            <li key={text}>
               <a href={url} className={s.a}>
                 {text}
               </a>
@@ -40,7 +34,12 @@ export default function Header() {
         {header.contact}
       </a>
 
-      <button onClick={handleOpenMenu} className={s.open}>
+      <button
+        onClick={handleOpenMenu}
+        className={s.open}
+        aria-label="Open menu"
+        aria-expanded={menuToggle}
+      >
         <RxHamburgerMenu size={30} />
       </button>
 
